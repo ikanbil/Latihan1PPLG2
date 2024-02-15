@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#35383f"
+
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kalkulator"
+        android:layout_marginTop="50dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/kalkulator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_akun"
+        android:layout_width="163dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="-200dp"
+        android:layout_marginTop="30dp"
+        android:text="Masukkan Angka"
+        android:textColor="#B3B0B0"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/et_angka1"
+        android:layout_width="120dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/ngotak"
+        android:hint="       Angka 1"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="#7C7979"
+        app:layout_constraintEnd_toEndOf="@+id/tv_akun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_akun" />
+
+    <EditText
+        android:id="@+id/et_angka2"
+        android:layout_width="120dp"
+        android:layout_height="54dp"
+        android:background="@drawable/ngotak"
+        android:hint="       Angka 2"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="#7C7979"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_angka1"
+        app:layout_constraintTop_toTopOf="@+id/et_angka1" />
+
+    <Spinner
+        android:id="@+id/spinnerpilih"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ngotakp"
+        android:entries="@array/pilihan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/txtHasil"
+        android:layout_width="229dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="10dp"
+        android:text="Hasil akan Berada disini!!"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerpilih" />
+
+    <Button
+        android:id="@+id/btnhasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="200dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Hasil"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerpilih" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
